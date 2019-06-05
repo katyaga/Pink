@@ -1,0 +1,41 @@
+.page-header {
+  background-color: @color-back-header;
+}
+
+.page-header__header {
+  min-height: 66px;
+  padding: 20px;
+}
+
+.page-header__logo {
+  width: 75px;
+  min-height: 22px;
+  display: block;
+  background-color: #2aab6d;
+}
+
+@media (min-width: @tablet-width) {
+  .page-header__header {
+    min-height: 110px;
+    padding-top: 27px;
+  }
+
+  .page-header__logo {
+    width: 147px;
+    min-height: 40px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-header {
+    //padding: 0 130px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    &__header {
+      width: 320px;
+      padding: 27px 0 0;
+    }
+  }
+}

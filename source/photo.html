@@ -6,7 +6,7 @@
   <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
-<header>
+<header class="page-header">
   <div class="page-header__header">
     <a class="page-header__logo">
       <span class="visually-hidden">Логотип приложения "Pink"</span>
@@ -33,133 +33,178 @@
   </nav>
 </header>
 <main class="inner-page-main">
-  <h1 class="">Фотографии пользователей</h1>
+
   <section class="inner-page-main__photos photos">
+    <div class="inner-page-main__back">
+      <h1 class="inner-page-main__title">Фотографии пользователей</h1>
+    </div>
+
     <p class="photos__text">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</p>
-    <article class="photos-item photos-item--photo-of-day">
-      <a class="photos-item__image"><img src="#" alt="Мост над рекой"></a>
-      <div class="photos-item__description">
-        <div>
-          <p class="photos-item__author">Анна</p>
-          <p class="photos-item__time">(5 минут назад)</p>
-        </div>
-        <blockquote class="photos-item__text">
-          Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!
-        </blockquote>
-        <div class="photos-item__likes">
-          <button class="photos-item__button"></button>
-          <p class="photos-item__like">Нравится: <span>215</span></p>
-        </div>
-      </div>
-    </article>
-    <article class="photos-item">
-      <a class="photos-item__image"><img src="#" alt="Штатив"></a>
-      <div class="photos-item__description">
-        <div>
-          <p class="photos-item__author">Левон</p>
-          <p class="photos-item__time">(5 часов назад)</p>
-        </div>
-        <blockquote class="photos-item__text">
-          Вчера он на луну летал, сегодня в руки к нам попал.
-        </blockquote>
-        <div class="photos-item__likes">
-          <button class="photos-item__button"></button>
-          <p class="photos-item__like">Нравится: <span>356</span></p>
-        </div>
-      </div>
-    </article><article class="photos-item">
-      <a class="photos-item__image"><img src="#" alt="Барабанная установка"></a>
-      <div class="photos-item__description">
-        <div>
-          <p class="photos-item__author">Антон</p>
-          <p class="photos-item__time">(12 часов назад)</p>
-        </div>
-        <blockquote class="photos-item__text">
-          Соседи будут рады!
-        </blockquote>
-        <div class="photos-item__likes">
-          <button class="photos-item__button"></button>
-          <p class="photos-item__like">Нравится: <span>666</span></p>
+
+    <article class="photo photo--photo-of-day">
+      <a class="photo__image">
+        <img src="#" alt="Мост над рекой">
+      </a>
+      <p class="photo__mark">Панорама дня</p>
+      <div class="container">
+        <div class="photo__description">
+          <div class="photo__author">
+            <p class="photo__author-name">Анна</p>
+            <p class="photo__time">(5 минут назад)</p>
+          </div>
+          <blockquote class="photo__text">
+            Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!
+          </blockquote>
+          <div class="photo__likes">
+            <button class="photo__button"></button>
+            <p class="photo__like">Нравится: <span>215</span></p>
+          </div>
         </div>
       </div>
     </article>
-    <article class="photos-item">
-      <a class="photos-item__image"><img src="#" alt="Облака сквозь стеклянный потолок"></a>
-      <div class="photos-item__description">
-        <div>
-          <p class="photos-item__author">Борис</p>
-          <p class="photos-item__time">(20 часов назад)</p>
+
+    <div class="container">
+      <article class="photo">
+        <a class="photo__image"><img src="#" alt="Штатив"></a>
+        <div class="photo__description">
+          <div class="photo__author">
+            <p class="photo__author-name">Левон</p>
+            <p class="photo__time">(5 часов назад)</p>
+          </div>
+          <blockquote class="photo__text">
+            Вчера он на луну летал, сегодня в руки к нам попал.
+          </blockquote>
+          <div class="photo__likes">
+            <button class="photo__button"></button>
+            <p class="photo__like">Нравится: <span>356</span></p>
+          </div>
         </div>
-        <blockquote class="photos-item__text">
-          Здесь могла быть ваша цитата о высоком и вечном.
-        </blockquote>
-        <div class="photos-item__likes">
-          <button class="photos-item__button"></button>
-          <p class="photos-item__like">Нравится: <span>215</span></p>
+      </article>
+      <article class="photo">
+        <a class="photo__image"><img src="#" alt="Барабанная установка"></a>
+        <div class="photo__description">
+          <div class="photo__author">
+            <p class="photo__author-name">Антон</p>
+            <p class="photo__time">(12 часов назад)</p>
+          </div>
+          <blockquote class="photo__text">
+            Соседи будут рады!
+          </blockquote>
+          <div class="photo__likes">
+            <button class="photo__button"></button>
+            <p class="photo__like">Нравится: <span>666</span></p>
+          </div>
         </div>
-      </div>
-    </article>
-    <article class="photos-item">
-      <a class="photos-item__image"><img src="#" alt="Кубанская бахча"></a>
-      <div class="photos-item__description">
-        <div>
-          <p class="photos-item__author">Сергей</p>
-          <p class="photos-item__time">(25 часов назад)</p>
+      </article>
+
+      <article class="photo">
+        <a class="photo__image"><img src="#" alt="Облака сквозь стеклянный потолок"></a>
+        <div class="photo__description">
+          <div class="photo__author">
+            <p class="photo__author-name">Борис</p>
+            <p class="photo__time">(20 часов назад)</p>
+          </div>
+          <blockquote class="photo__text">
+            Здесь могла быть ваша цитата о высоком и вечном.
+          </blockquote>
+          <div class="photo__likes">
+            <button class="photo__button"></button>
+            <p class="photo__like">Нравится: <span>215</span></p>
+          </div>
         </div>
-        <blockquote class="photos-item__text">
-          Самая кубанская в мире!
-        </blockquote>
-        <div class="photos-item__likes">
-          <button class="photos-item__button"></button>
-          <p class="photos-item__like">Нравится: <span>4</span></p>
+      </article>
+      <article class="photo">
+        <a class="photo__image"><img src="#" alt="Кубанская бахча"></a>
+        <div class="photo__description">
+          <div class="photo__author">
+            <p class="photo__author-name">Сергей</p>
+            <p class="photo__time">(25 часов назад)</p>
+          </div>
+          <blockquote class="photo__text">
+            Самая кубанская в мире!
+          </blockquote>
+          <div class="photo__likes">
+            <button class="photo__button"></button>
+            <p class="photo__like">Нравится: <span>4</span></p>
+          </div>
         </div>
-      </div>
-    </article>
-    <article class="photos-item">
-      <a class="photos-item__image"><img src="#" alt="Ноги на вершине горы"></a>
-      <div class="photos-item__description">
-        <div>
-          <p class="photos-item__author">Максим</p>
-          <p class="photos-item__time">(40 часов назад)</p>
+      </article>
+      <article class="photo">
+        <a class="photo__image"><img src="#" alt="Ноги на вершине горы"></a>
+        <div class="photo__description">
+          <div class="photo__author">
+            <p class="photo__author-name">Максим</p>
+            <p class="photo__time">(40 часов назад)</p>
+          </div>
+          <blockquote class="photo__text">
+            Где снег-то?
+          </blockquote>
+          <div class="photo__likes">
+            <button class="photo__button"></button>
+            <p class="photo__like">Нравится: <span>150</span></p>
+          </div>
         </div>
-        <blockquote class="photos-item__text">
-          Где снег-то?
-        </blockquote>
-        <div class="photos-item__likes">
-          <button class="photos-item__button"></button>
-          <p class="photos-item__like">Нравится: <span>150</span></p>
+      </article>
+      <article class="photo">
+        <a class="photo__image"><img src="#" alt="Крыло сомолёта"></a>
+        <div class="photo__description">
+          <div class="photo__author">
+            <p class="photo__author-name">Надежда</p>
+            <p class="photo__time">(45 часов назад)</p>
+          </div>
+          <blockquote class="photo__text">
+            Всем GM и взаимные лайки!
+          </blockquote>
+          <div class="photo__likes">
+            <button class="photo__button"></button>
+            <p class="photo__like">Нравится: <span>2560</span></p>
+          </div>
         </div>
-      </div>
-    </article>
-    <article class="photos-item">
-      <a class="photos-item__image"><img src="#" alt="Крыло сомолёта"></a>
-      <div class="photos-item__description">
-        <div>
-          <p class="photos-item__author">Надежда</p>
-          <p class="photos-item__time">(45 часов назад)</p>
-        </div>
-        <blockquote class="photos-item__text">
-          Всем GM и взаимные лайки!
-        </blockquote>
-        <div class="photos-item__likes">
-          <button class="photos-item__button"></button>
-          <p class="photos-item__like">Нравится: <span>2560</span></p>
-        </div>
-      </div>
-    </article>
+      </article>
+    </div>
   </section>
-  <section class="upload-photos">
-    <p class="upload-photos__text">Затмите их всех! Выкладывайте все, что накопилось в телефоне!</p>
-    <article class="upload-photos__form">
-      <img src="#" alt="Загрузить фото">
-      <ul class="upload-photos__settings">
-        <li><span class="visually-hidden">Кадрирование</span></li>
-        <li><span class="visually-hidden">Заливка</span></li>
-        <li><span class="visually-hidden">Контрастность</span></li>
-      </ul>
-      <button class="upload-photos__post">Запостить</button>
-      <button class="upload-photos__reset" type="reset">Отмена</button>
+  <section class="upload-photo">
+    <p class="upload-photo__text">Затмите их всех!<br> Выкладывайте все, что накопилось в телефоне!</p>
+
+    <article class="upload-photo__form">
+      <div class="container">
+        <img src="#" alt="Загрузить фото">
+
+        <div class="upload-photo__settings">
+
+          <div class="upload-photo__setting upload-photo__setting--cut">
+            <button class="upload-photo__buttons">
+              <span class="visually-hidden">Кадрирование</span>
+            </button>
+            <div class="upload-photo__progressbar">
+              <div class="upload-photo__progressbar-scale"></div>
+            </div>
+          </div>
+
+          <div class="upload-photo__setting upload-photo__setting--fill">
+            <button class="upload-photo__buttons">
+              <span class="visually-hidden">Заливка</span>
+            </button>
+            <div class="upload-photo__progressbar">
+              <div class="upload-photo__progressbar-scale"></div>
+            </div>
+          </div>
+
+          <div class="upload-photo__setting upload-photo__setting--bright">
+            <button class="upload-photo__buttons">
+              <span class="visually-hidden">Контрастность</span>
+            </button>
+            <div class="upload-photo__progressbar">
+              <div class="upload-photo__progressbar-scale"></div>
+            </div>
+          </div>
+          <button class="upload-photo__button upload-photo__button--active">Запостить</button>
+          <button class="upload-photo__button upload-photo__button--disabled" type="reset">Отмена</button>
+        </div>
+
+      </div>
     </article>
+
   </section>
 </main>
 <footer class="page-footer">

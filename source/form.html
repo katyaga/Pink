@@ -6,7 +6,7 @@
   <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
-<header>
+<header class="page-header">
   <div class="page-header__header">
     <a class="page-header__logo">
       <span class="visually-hidden">Логотип приложения "Pink"</span>
@@ -24,23 +24,28 @@
         <a class="site-list__link" href="photo.html">Фотографии</a>
       </li>
       <li class="site-list__item">
-        <a class="site-list__link site-list__link--active" href="#">Конкурс</a>
+        <a class="site-list__link site-list__link--active">Конкурс</a>
       </li>
       <li class="site-list__item">
-        <a class="site-list__link" href="#">HTML Academy</a>
+        <a class="site-list__link" href="https://htmlacademy.ru">HTML Academy</a>
       </li>
     </ul>
   </nav>
 </header>
 <main class="inner-page-main">
   <section class="competition">
-    <h1 class="competition__heading">Конкурс на самое безбашенное путешествие с Пинк</h1>
-    <p class="competition__text">
-      Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль
-      на вашу бонусную карту! Пожалуйста, заполните форму ниже:
-    </p>
+    <div class="inner-page-main__back">
+      <h1 class="competition__heading">Конкурс на самое безбашенное путешествие с Пинк</h1>
+    </div>
+    <div class="container">
+
+      <p class="competition__text">
+        Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль
+        на вашу бонусную карту! <span>Пожалуйста, заполните форму ниже:</span>
+      </p>
+    </div>
     <form class="competition__form form">
-      <fieldset class="form__fieldset form__fieldset--name container">
+      <fieldset class="form__fieldset form__fieldset--name">
         <legend class="visually-hidden">ФИО участника</legend>
         <p class="form__field">
           <label class="form__label" for="surname">Фамилия:</label>
@@ -56,8 +61,11 @@
         </p>
       </fieldset>
       <fieldset class="form__fieldset form__fieldset--progress">
-        <legend class="form__legend">Ваши безбашенные достижения в путешествии</legend>
-        <ul class="form__fields-list container">
+        <legend class="form__legend">
+          <span>Ваши безбашенные достижения в путешествии</span>
+<!--          Ваши безбашенные достижения в путешествии-->
+        </legend>
+        <ul class="form__fields-list">
           <li class="form__field checkbox-button">
             <input class="visually-hidden checkbox-button__input" type="checkbox" name="shark" id="shark" checked>
             <label class="checkbox-button__label" for="shark">Сделал селфи с акулой</label>
@@ -84,8 +92,11 @@
           </li>
         </ul>
       </fieldset>
-      <fieldset class="form__fieldset form__fieldset--contacts container">
-        <legend class="visually-hidden">Контактные данные</legend>
+      <fieldset class="form__fieldset form__fieldset--contacts">
+        <legend class="form__legend">
+          <span>Контактная информация</span>
+        </legend>
+        <div>
         <p class="form__field form__field--phone">
           <label class="form__label" for="user-phone">Номер телефона</label>
           <input class="form__input form__input--phone" id="user-phone"  name="user-phone"
@@ -96,10 +107,13 @@
           <input class="form__input form__input--email" id="user-email"  name="user-email"
                 type="email" placeholder="Введите почту *" required>
       </p>
+        </div>
       </fieldset>
       <fieldset class="form__fieldset form__fieldset--app">
-        <legend class="form__legend">С каким приложением путешествовали?</legend>
-        <ul class="form__fields-list container">
+        <legend class="form__legend">
+          <span>С каким приложением путешествовали?</span>
+        </legend>
+        <ul class="form__fields-list">
           <li class="form__field radio-button">
             <input class="visually-hidden radio-button__input" type="radio" name="app" id="ios" value="ios" checked>
             <label class="radio-button__label" for="ios">Pink для iOS</label>
@@ -114,17 +128,20 @@
           </li>
         </ul>
       </fieldset>
-      <fieldset class="form__fieldset form__fieldset--comment container">
-        <legend class="form__legend">Опишите свои эмоции</legend>
+      <fieldset class="form__fieldset form__fieldset--comment">
+        <legend class="form__legend"><span>Опишите свои эмоции</span></legend>
         <p class="form__field">
           <label class="visually-hidden" for="user-comment">Текст комментария:</label>
           <textarea class="form__textarea" id="user-comment" name="user-comment"
                     placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
         </p>
       </fieldset>
-      <div class="form__bottom container">
-        <button class="form__button button">Отправить форму</button>
-        <small class="form__note">* — Обязательные поля</small>
+
+      <div class="form__bottom">
+        <div class="container">
+          <button class="form__button button">Отправить форму</button>
+          <small class="form__note"><span>* </span>— Обязательные<span>для заполнения</span> поля</small>
+        </div>
       </div>
     </form>
   </section>

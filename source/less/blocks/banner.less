@@ -1,0 +1,172 @@
+.banner {
+  padding-top: 396px;
+  //max-width: 320px;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: @color-dark-font;
+  background-image: url("../../img/iphone-5-in-hand-png.png"),
+    url("../../img/back-mobile-jpg.png");
+  background-repeat: no-repeat;
+  background-position: center 111px, center -65px;
+}
+
+.banner__app {
+  width: 100%;
+  min-height: 271px;
+  padding-top: 28px;
+  background-color: @color-dark-font;
+  //text-align: center;
+}
+
+//.banner__back {
+//  order: -1;
+//  min-height: 396px;
+//  width: 100%;
+//}
+
+.banner__list {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 25px;
+  padding-left: 38px;
+  padding-right: 38px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+}
+
+.banner__slogan {
+  display: none;
+  font-family: "OpenSansLight", "Arial", sans-serif;
+  font-size: 40px;
+  line-height: 40px;
+  font-weight: 300;
+  color: @color-back-white;
+  text-align: center;
+}
+
+.banner__text {
+  margin: 0;
+  font-family: "OpenSansLight", "Arial", sans-serif;
+  color: @color-back-white;
+  text-align: center;
+}
+
+.banner__button {
+  display: block;
+  width: 280px;
+  margin-bottom: 28px;
+  padding-top: 18px;
+  padding-bottom: 18px;
+  font-family: "OpenSansBold", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 18px;
+  text-align: center;
+  color: @color-back-white;
+  border: 3px solid @color-back-white;
+  border-radius: 35px;
+}
+
+.banner__item {
+  display: block;
+  background-color: #2aab6d;
+
+  &--apple {
+    width: 47px;
+    height: 56px;
+  }
+
+  &--android {
+    width: 43px;
+    height: 47px;
+  }
+
+  &--windows {
+    width: 44px;
+    height: 41px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .banner {
+    padding-top: 73px;
+    //position: relative;
+    background-image: url("../../img/back-tablet-1-x.png");
+    background-position: center -110px;
+    background-repeat: no-repeat;
+  }
+  //
+  //.banner__back {
+  //  min-height: 729px;
+  //}
+
+  .banner__slogan {
+    margin-left: 50px;
+    margin-bottom: 35px;
+    display: block;
+    width: 200px;
+  }
+
+  .banner__app {
+    min-height: 545px;
+    //position: absolute;
+    //top: 100px;
+    //left: 20px;
+    //width: 300px;
+    background-color: transparent;
+    background-image: url("../../img/iphone-6-copy.png");
+    background-position: center;
+    background-repeat: no-repeat;
+
+    //.container {
+    //  width: 300px;
+    //  padding: 0;
+    //}
+  }
+
+  .banner__button {
+    width: 300px;
+  }
+
+  .banner__text {
+    width: 300px;
+    font-size: 18px;
+  }
+
+  .banner__list {
+    width: 300px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .banner {
+    justify-content: center;
+    background-image: url("../../img/back-desktop.png");
+    background-position: center -110px;
+    background-repeat: no-repeat;
+
+
+    &__app {
+      min-height: 645px;
+      background-image: url("../../img/iphone-6.png");
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    &__slogan {
+      width: 240px;
+      font-size: 50px;
+      line-height: 50px;
+    }
+
+    &__button {
+      font-size: 21px;
+    }
+
+    //.container {
+    //  width: 300px;
+    //}
+  }
+}

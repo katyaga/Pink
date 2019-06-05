@@ -1,0 +1,31 @@
+.social {
+  &__list {
+    margin: 0;
+    padding: 0;
+    width: 280px;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-bottom: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    //width: ;
+    list-style: none;
+  }
+
+  &__item {
+    width: 46px;
+    height: 46px;
+    background-color: #d22856;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .social {
+    width: 275px;
+
+    &__list {
+      margin-bottom: 0;
+    }
+  }
+}

@@ -1,0 +1,272 @@
+//.plans-table {
+//  // border-collapse: collapse;
+//  border-spacing: 0;
+//  table-layout: fixed;
+//
+//  text-transform: uppercase;
+//}
+//
+//.plans-table__cell {
+//  position: relative;
+//
+//  box-sizing: border-box;
+//  min-width: 278px;
+//  padding: 14px;
+//  padding-left: 22px;
+//  border: 1px solid #e5e5e5;
+//
+//  background-color: #ffffff;
+//
+//  &--top {
+//    // border-top-width: 2px;
+//    border-top: none;
+//  }
+//
+//  &--top-left {
+//    border-top-width: 2px;
+//  }
+//
+//  &--bottom {
+//    border-bottom-width: 2px;
+//  }
+//
+//  &--left {
+//    display: none;
+//  }
+//
+//  &--right {
+//    border-right-width: 2px;
+//  }
+//
+//  &--true {
+//    &::after {
+//      content: "";
+//
+//      position: absolute;
+//      top: 20px;
+//      right: 18px;
+//
+//      width: 31px;
+//      height: 21px;
+//
+//      background-image: url("../img/yes.svg");
+//      background-repeat: no-repeat;
+//      background-size: 31px 21px;
+//    }
+//  }
+//
+//  &--false {
+//    &::after {
+//      content: "";
+//
+//      position: absolute;
+//      top: 15px;
+//      right: 20px;
+//
+//      width: 27px;
+//      height: 26px;
+//
+//      background-image: url("../img/icon-no.svg");
+//      background-repeat: no-repeat;
+//      background-size: 27px 26px;
+//    }
+//  }
+//}
+//
+//.plans-table__title {
+//  position: relative;
+//
+//  padding-top: 16px;
+//  padding-bottom: 20px;
+//  border: 1px solid #e5e5e5;
+//  border-left-color: #e5e5e5;
+//  border-right-color: #e5e5e5;
+//  // border-right: none;
+//  border-top: none;
+//  border-bottom: none;
+//
+//  text-align: center;
+//  color: @color-back-grey;
+//
+//  background-color: #283645;
+//
+//  &:nth-child(2) {
+//    border-left: none;
+//  }
+//
+//  &:last-child {
+//    border-right: 2px solid #283645;
+//  }
+//
+//  &--hidden {
+//    background-color: transparent;
+//    border: none;
+//    border-right: 1px solid #283645;
+//    border-bottom: 2px solid #e5e5e5;
+//  }
+//
+//  &--popular::after {
+//    content: "";
+//
+//    position: absolute;
+//    top: 0;
+//    left: -2px;
+//
+//    width: 74px;
+//    height: 73px;
+//
+//    background-image: url("../img/bg-hit.svg");
+//    background-size: 74px 73px;
+//  }
+//
+//  &--popular::before {
+//    content: "хит";
+//
+//    text-transform: uppercase;
+//    color: @color-back-grey;
+//
+//    position: absolute;
+//    top: 12px;
+//    left: 2px;
+//
+//    width: 40px;
+//    height: 30px;
+//
+//    transform: rotate(-45deg);
+//
+//    z-index: 1;
+//  }
+//}
+//
+//.plans-table__plan-type {
+//  display: block;
+//
+//  margin-bottom: 3px;
+//
+//  font-size: 18px;
+//  font-weight: 700;
+//}
+//
+//.plans-table__plan-price {
+//  display: block;
+//
+//  font-size: 24px;
+//  font-weight: 300;
+//  font-style: normal;
+//}
+//
+//@media (min-width: @tablet-width) {
+//  .plans-table {
+//    text-transform: none;
+//  }
+//
+//  .plans-table__cell {
+//    min-width: auto;
+//    padding: 7px 14px 8px 14px;
+//
+//    &--true {
+//      background-image: url("../img/yes.svg");
+//      background-repeat: no-repeat;
+//      background-size: 31px 21px;
+//      background-position: center center;
+//
+//      &::after {
+//        display: none;
+//      }
+//    }
+//
+//    &--false {
+//      background-image: url("../img/icon-no.svg");
+//      background-repeat: no-repeat;
+//      background-size: 27px 26px;
+//      background-position: center center;
+//
+//      &::after {
+//        display: none;
+//      }
+//    }
+//  }
+//
+//  .plans-table__cell--left {
+//    display: table-cell;
+//
+//    border-left-width: 2px;
+//  }
+//
+//  .plans-table__title {
+//    overflow: hidden;
+//
+//    padding: 12px;
+//
+//    &--popular::after {
+//      top: 0;
+//      left: 0;
+//
+//      width: 61px;
+//      height: 61px;
+//
+//      background-image: url("../img/bg-hit-tablet.svg");
+//      background-size: 61px 61px;
+//    }
+//
+//    &--popular::before {
+//      top: 4px;
+//      left: 0;
+//    }
+//  }
+//
+//  .plans-table__plan-type {
+//    margin-bottom: 0;
+//
+//    font-size: 16px;
+//    text-transform: uppercase;
+//  }
+//
+//  .plans-table__plan-price {
+//    font-size: 18px;
+//    line-height: 24px;
+//  }
+//
+//  .plans-table__text {
+//    display: none;
+//  }
+//}
+//
+//@media (min-width: @desktop-width) {
+//  .plans-table__title {
+//    padding: 17px;
+//
+//    &--popular::after {
+//      top: 0;
+//      left: 0;
+//
+//      width: 74px;
+//      height: 73px;
+//
+//      background-image: url("../img/bg-hit.svg");
+//      background-size: 74px 73px;
+//    }
+//
+//    &--popular::before {
+//      top: 12px;
+//      left: 4px;
+//    }
+//  }
+//
+//  .plans-table__plan-type {
+//    margin-bottom: 2px;
+//
+//    font-size: 18px;
+//  }
+//
+//  .plans-table__plan-price {
+//    font-size: 24px;
+//    line-height: 30px;
+//  }
+//
+//  .plans-table__cell {
+//    padding: 14px 21px 15px 21px;
+//
+//    font-size: 18px;
+//  }
+//}

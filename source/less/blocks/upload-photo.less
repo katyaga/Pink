@@ -1,0 +1,144 @@
+.upload-photo {
+  background-color: @color-back-white;
+}
+
+.upload-photo__text {
+  margin: 0 auto;
+  margin-top: 45px;
+  margin-bottom: 33px;
+  width: 260px;
+  line-height: 30px;
+  text-align: center;
+  //background-color: @color-back-white;
+}
+
+.upload-photo__settings {
+  min-height: 75px;
+  margin: 0;
+  padding: 0 44px 0 35px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+}
+
+.upload-photo__button {
+  width: 100%;
+  padding: 15px 0;
+  margin-bottom: 12px;
+  font-family: "OpenSansBold", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 18px;
+  background-color: transparent;
+  border: 3px solid @color-pink;
+  border-radius: 30px;
+
+  &--active {
+    color: @color-pink;
+  }
+
+  &--disabled {
+    color: @color-button-disabled;
+    border-color: @color-button-disabled;
+  }
+
+  &:first-of-type {
+    margin-top: 30px;
+  }
+}
+
+.upload-photo__form {
+  //min-height: 757px;
+  background-color: @color-back-grey;
+
+  .container {
+    padding-top: 20px;
+    padding-bottom: 40px;
+  }
+
+  img {
+    display: block;
+    width: 280px;
+    height: 374px;
+    margin-bottom: 40px;
+    background-color: #2aab6d;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .upload-photo {
+    &__text {
+      padding: 70px 0 68px;
+      width: 430px;
+      font-size: 18px;
+    }
+  }
+
+  .upload-photo__form {
+    .container {
+      padding-top: 57px;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    img {
+      margin-right: 45px;
+      margin-bottom: 10px;
+      width: 300px;
+      height: 400px;
+    }
+  }
+
+  .upload-photo__settings {
+    flex-direction: column;
+  }
+
+  .upload-photo__button {
+    width: 260px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .upload-photo {
+    &__text {
+      padding: 60px 0 65px;
+    }
+
+    &__settings {
+      padding: 0;
+      width: 410px;
+      flex-direction: row;
+    }
+
+    &__setting {
+
+      width: 100%;
+    }
+
+    &__button {
+      width: 183px;
+
+      &:first-of-type {
+        margin-top: 0;
+      }
+    }
+  }
+
+  .upload-photo__form {
+
+    background-color: @color-back-white;
+
+    .container {
+      width: 940px;
+      padding-left: 80px;
+      padding-right: 60px;
+
+      background-color: @color-back-grey;
+    }
+
+    img {
+      margin-right: 90px;
+    }
+  }
+}

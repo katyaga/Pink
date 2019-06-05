@@ -1,0 +1,27 @@
+.checkbox-button {
+  &__label {
+    font-size: 18px;
+    line-height: 30px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .checkbox-button {
+    //float: left;
+    width: 260px;
+
+    &:nth-child(2n) {
+      order: 2;
+    }
+
+    //&:nth-child(3n) {
+    //  width: 150px;
+    //}
+    //
+    //&:nth-child()
+
+    &__label {
+      //padding-left: 60px;
+    }
+  }
+}

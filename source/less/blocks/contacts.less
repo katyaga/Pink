@@ -1,0 +1,128 @@
+.contacts {
+  position: relative;
+  //padding-top: 45px;
+  padding-bottom: 167px;
+  text-align: center;
+
+  &__phone {
+    margin-bottom: 25px;
+  }
+
+  &__email {
+    margin-bottom: 25px;
+  }
+}
+
+.contacts__contacts {
+  padding-top: 45px;
+  z-index: 10;
+  min-height: 447px;
+  background-color: @color-back-white;
+}
+
+.contacts__property {
+  margin: 0;
+  font-family: "OpenSansBold", "Arial", sans-serif;
+  font-size: 18px;
+  color: @color-black-font;
+  //text-align: center;
+}
+
+.contacts__value {
+  margin: 0;
+  font-family: "OpenSansLight", "Arial", sans-serif;
+  font-size: 24px;
+  font-weight: 300;
+  color: @color-pink;
+  //text-align: center;
+}
+
+.contacts__text {
+  display: block;
+  margin-bottom: 40px;
+  font-family: "OpenSansLight", "Arial", sans-serif;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 24px;
+}
+
+.contacts__map {
+  z-index: -10;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  min-height: 645px;
+  //margin-top: -478px;
+  background-color: #2aab6d;
+}
+
+@media (min-width: @tablet-width) {
+  .contacts__text {
+    width: 100%;
+    padding: 0 120px;
+    margin: 0 auto 40px;
+    font-size: 40px;
+    line-height: 40px;
+  }
+
+  .contacts {
+    padding-bottom: 306px;
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+
+    &__phone {
+      margin-left: 45px;
+      //margin-right: 100px;
+    }
+
+    &__map {
+      min-height: 721px;
+    }
+
+    &__contacts {
+      min-height: 473px;
+    }
+
+    //&__adress {
+    //  margin: 0 auto;
+    //}
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .contacts {
+    padding-bottom: 400px;
+
+    &__text {
+      padding-left: 230px;
+      padding-right: 230px;
+      font-size: 50px;
+      line-height: 50px;
+    }
+
+    &__phone {
+      width: 210px;
+    }
+
+    &__address {
+      width: 220px;
+    }
+
+    &__email {
+      order: 1;
+      width: 240px;
+    }
+
+    &__map {
+      min-height: 805px;
+    }
+
+    &__contacts {
+      min-height: 468px;
+    }
+  }
+}
