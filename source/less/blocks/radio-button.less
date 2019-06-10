@@ -1,4 +1,46 @@
-.radio-button__label {
-  font-size: 18px;
-  line-height: 30px;
+.radio-button {
+  display: flex;
+  flex-wrap: wrap;
+
+  &__label {
+    position: relative;
+    padding-left: 70px;
+    font-size: 18px;
+    line-height: 30px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -5px;
+      left: -1px;
+      width: 39px;
+      height: 39px;
+      border: 2px solid @color-border-grey;
+      border-radius: 50%;
+      background: @color-back-white;
+    }
+  }
+
+  &__input {
+    &:checked + label::after {
+      content: "";
+      position: absolute;
+      top: 7px;
+      left: 11px;
+      z-index: 10;
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      background: @color-pink;
+    }
+
+    &:hover + label::before,
+    &:focus + label::before {
+      border-color: @color-dark-font;
+    }
+
+    &:active + label::before {
+      border-color: @color-pink;
+    }
+  }
 }

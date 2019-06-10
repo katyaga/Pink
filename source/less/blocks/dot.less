@@ -1,0 +1,27 @@
+.dot {
+  padding: 0;
+  width: 6px;
+  height: 6px;
+  box-sizing: content-box;
+  background-color: @color-back-header;
+  border: none;
+  border-radius: 50%;
+  outline: none;
+
+  &:hover,
+  &:focus {
+    background-color: @color-button-hover;
+  }
+
+  &:active {
+    background-color: @color-button-disabled;
+  }
+
+  &--active,
+  &--active:hover,
+  &--active:focus,
+  &--active:active {
+    border: 3px solid @color-dark-font;
+    background-color: @color-back-white;
+  }
+}

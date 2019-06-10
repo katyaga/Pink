@@ -17,6 +17,16 @@
   line-height: 32px;
   text-transform: uppercase;
   color: @color-back-white;
+
+  &:hover,
+  &:focus {
+    color: @color-pink;
+  }
+
+  &:active {
+    //color: @color-back-white;
+    opacity: 0.3;
+  }
 }
 
 @media (min-width: @desktop-width) {
@@ -33,9 +43,25 @@
     }
 
     &__link {
+      padding-bottom: 5px;
       font-family: "OpenSansdRegular", "Arial", sans-serif;
       line-height: 18px;
       text-transform: none;
+
+      &:active {
+        color: @color-back-white;
+        opacity: 0.3;
+      }
+
+      &--active {
+        border-bottom: 2px solid @color-back-white;
+
+        &:hover,
+        &:focus,
+        &:active {
+          color: @color-back-white;
+        }
+      }
     }
   }
 }

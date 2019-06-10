@@ -13,10 +13,44 @@
     list-style: none;
   }
 
-  &__item {
+  //&__item {
+  //  width: 46px;
+  //  height: 46px;
+  //  background-color: #d22856;
+  //}
+
+  &__link {
+    display: block;
     width: 46px;
     height: 46px;
-    background-color: #d22856;
+    border: 3px solid @color-border-grey;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    &--twitter {
+      background-image: url("../img/twitter-svg.svg");
+      background-size: 18px 14px;
+    }
+
+    &--facebook {
+      background-image: url("../img/icon-facebook.svg");
+      background-size: 9px 18px;
+    }
+
+    &--youtube {
+      background-image: url("../img/icon-youtube.svg");
+      background-size: 15px 13px;
+    }
+
+    &:hover,
+    &:focus {
+      border-color: @color-dark-font;
+    }
+
+    &:active {
+      opacity: 0.1;
+    }
   }
 }
 

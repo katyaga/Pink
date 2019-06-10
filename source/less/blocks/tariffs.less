@@ -219,21 +219,23 @@ tbody td {
 }
 
 .tariffs__option {
+  position: relative;
   line-height: 30px;
+
+  &::after {
+    content: "";
+    position: absolute;
+  }
 
   &--on {
     &::after {
-      content: "";
-
-      position: absolute;
       top: 20px;
       right: 18px;
-
       width: 31px;
       height: 21px;
-      background-color: #2aab6d;
+      //background-color: #2aab6d;
 
-      background-image: url("../img/yes.svg");
+      background-image: url("../img/yes-svg.svg");
       background-repeat: no-repeat;
       background-size: 31px 21px;
     }
@@ -241,17 +243,13 @@ tbody td {
 
   &--of {
     &::after {
-      content: "";
-
-      position: absolute;
       top: 15px;
       right: 20px;
-
       width: 27px;
       height: 26px;
-      background-color: #d22856;
+      //background-color: #d22856;
 
-      background-image: url("../img/icon-no.svg");
+      background-image: url("../img/no-svg.svg");
       background-repeat: no-repeat;
       background-size: 27px 26px;
     }
@@ -260,14 +258,13 @@ tbody td {
 
 .tariffs__caption {
   position: relative;
-
   padding-top: 16px;
   padding-bottom: 20px;
   border: 1px solid #e5e5e5;
   border-right: none;
   border-top: none;
   border-bottom: none;
-
+  overflow: hidden;
   text-align: center;
   color: @color-back-grey;
 
@@ -293,6 +290,25 @@ tbody td {
     border: none;
     border-right: 1px solid #283645;
     border-bottom: 2px solid #e5e5e5;
+  }
+
+  &--hit::before {
+    content: "ХИТ";
+    position: absolute;
+    top: 0;
+    left: -100px;
+    width: 100%;
+    //height: 60px;
+    z-index: 10;
+    font-family: "OpenSansdRegular", "Arial", sans-serif;
+    font-size: 15px;
+    line-height: 30px;
+    padding-right: 35px;
+    background-color: #d22856;
+    //background-image: url("../img/new-flag.png");
+    background-position: left top;
+    background-repeat: no-repeat;
+    transform: rotate(-45deg);
   }
 
   //&--popular::after {
@@ -329,6 +345,7 @@ tbody td {
 }
 
 .tariffs__name {
+  margin: 0;
   display: block;
 
   margin-bottom: 3px;
@@ -339,8 +356,9 @@ tbody td {
 }
 
 .tariffs__price {
+  margin: 0;
   display: block;
-
+  font-family: "OpenSansLight", "Arial", sans-serif;
   font-size: 24px;
   line-height: 30px;
   font-weight: 300;
@@ -352,8 +370,10 @@ tbody td {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  align-items: center;
 }
 
+/////////////////////////////////////////////////////////////////////////////////////////////////////
 @media (min-width: @tablet-width) {
   .tariffs {
     width: 100%;
@@ -430,20 +450,17 @@ tbody td {
     overflow: hidden;
     padding: 12px;
 
-    &--popular::after {
+    &--hit::before {
       top: 0;
-      left: 0;
-
-      width: 61px;
-      height: 61px;
-
-      background-image: url("../img/bg-hit-tablet.svg");
-      background-size: 61px 61px;
-    }
-
-    &--popular::before {
-      top: 4px;
-      left: 0;
+      left: -50px;
+      width: 100%;
+      //height: 60px;
+      font-size: 15px;
+      font-weight: 700;
+      line-height: 30px;
+      padding-right: 20px;
+      //background-image: url("../img/new-flag.png");
+      background-position: left top;
     }
   }
 
@@ -463,7 +480,12 @@ tbody td {
   }
 }
 
+///////////////////////////////////////////////////////////////////////////////////////////////////
 @media (min-width: @desktop-width) {
+  .tariffs__wrapper {
+    width: 940px;
+  }
+
   .tariffs-table__title {
     padding: 17px;
 
@@ -507,5 +529,9 @@ tbody td {
     padding: 14px 21px 15px 21px;
 
     font-size: 18px;
+  }
+
+  .tariffs__table td {
+    min-width: 233px;
   }
 }

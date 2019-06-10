@@ -1,7 +1,45 @@
 .checkbox-button {
+  display: flex;
+  flex-wrap: wrap;
+
   &__label {
+    position: relative;
+    padding-left: 70px;
     font-size: 18px;
     line-height: 30px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -5px;
+      left: -1px;
+      width: 39px;
+      height: 39px;
+      border: 2px solid @color-border-grey;
+      background: @color-back-white;
+    }
+  }
+
+  &__input {
+    &:checked + label::after {
+      content: "";
+      position: absolute;
+      width: 22px;
+      height: 16px;
+      top: 4px;
+      left: 9px;
+      background-image: url("../img/icon-yes.svg");
+      background-repeat: no-repeat;
+    }
+
+    &:hover + label::before,
+    &:focus + label::before {
+      border-color: @color-dark-font;
+    }
+
+    &:active + label::before {
+      border-color: @color-pink;
+    }
   }
 }
 

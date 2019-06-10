@@ -121,7 +121,7 @@
   list-style: none;
 
   .form__field {
-    padding-left: 70px;
+    //padding-left: 70px;
 
     &:not(:last-child) {
       margin-bottom: 57px;
@@ -139,6 +139,15 @@
   font-size: 18px;
   line-height: 30px;
   color: @color-dark-font;
+
+  &:hover,
+  &:focus {
+    border-color: @color-dark-font;
+  }
+
+  &:disabled {
+    border-color: @color-pink;
+  }
 }
 
 .form__textarea {
@@ -171,6 +180,21 @@
   background-color: @color-form-button;
   border: 2px solid @color-form-button;
   border-radius: 3px;
+
+  &:hover,
+  &:focus {
+    background-color: @color-form-button-hover;
+    border: 2px solid @color-form-button-hover;
+  }
+
+  &:active {
+    color: @color-white-light;
+  }
+
+  &:disabled {
+    background-color: @color-border-grey;
+    border: 2px solid @color-border-grey;
+  }
 }
 
 .form__note {
@@ -190,6 +214,7 @@
   }
 }
 
+//////////////////////////////////////////////////////////////////////////////////////////////////
 @media (min-width: @tablet-width) {
   .form {
     display: flex;
@@ -233,17 +258,41 @@
       }
 
       .form__field {
+        position: relative;
         display: flex;
         flex-wrap: wrap;
         flex-direction: column;
         flex-grow: 0;
         //align-items: center;
+
+        &--phone::after {
+          background-image: url("../img/phone-svg.svg");
+          background-size: 20px 19px;
+        }
+
+        &--email::after {
+          background-image: url("../img/mail-svg.svg");
+          background-size: 18px 13px;
+        }
+
+        &::after {
+          content: "";
+          position: absolute;
+          top: 1px;
+          right: 2px;
+          width: 60px;
+          height: 60px;
+          background-color: @color-border-grey;
+          background-repeat: no-repeat;
+          background-position: center;
+        }
       }
 
       .form__input {
         order: -1;
         width: 100%;
         margin-bottom: 20px;
+        padding-right: 65px;
       }
     }
 
@@ -351,7 +400,7 @@
         //justify-content: space-between;
 
         .checkbox-button {
-          padding-left: 60px;
+          //padding-left: 60px;
           margin-top: 18px;
           margin-right: 30px;
           margin-bottom: 32px;

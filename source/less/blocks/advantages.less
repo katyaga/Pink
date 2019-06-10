@@ -1,9 +1,19 @@
 .advantages {
+  position: relative;
   padding-top: 42px;
-  min-height: 1002px;
-  background-color: @color-back-grey;
-  background-image: linear-gradient(175deg, white 35%, transparent 35%);
+  padding-bottom: 280px;
+  //min-height: 1002px;
   text-align: center;
+  background-color: @color-back-grey;
+  background-image: linear-gradient(175deg, white 35%, transparent 35%),
+    url("../img/iphone-screen-3-mobile-k.png");
+  background-position: bottom;
+  background-repeat: no-repeat;
+
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    background-image: url("../img/iphone-screen-3-mobile-k@2x.png");
+    background-size: 157px auto;
+  }
 }
 
 .advantages__text {
@@ -69,8 +79,10 @@
 
 @media (min-width: @tablet-width) {
   .advantages {
+    padding-bottom: 0;
     min-height: 725px;
     text-align: left;
+    background-image: linear-gradient(175deg, white 30%, transparent 30%);
   }
 
   .advantages__text {
@@ -87,9 +99,19 @@
   }
 
   .advantages__list {
-    width: 310px;
-    margin-left: 310px;
+    width: 620px;
+    margin: 0 auto;
+    padding-top: 105px;
+    padding-left: 310px;
     text-align: left;
+    background-image: url("../img/iphone-screen-3-tablet.png");
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: 268px auto;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/iphone-screen-3-tablet-k@2x.png");
+    }
   }
 
   .advantages__item {
@@ -99,10 +121,43 @@
   .advantages__effect {
     display: block;
     min-height: 387px;
-    padding-top: 100px;
 
     .container {
-      margin-left: 310px;
+      position: relative;
+      padding-top: 100px;
+      padding-left: 310px;
+
+      &::after {
+        content: "24";
+        position: absolute;
+        top: 115px;
+        left: 18px;
+        width: 200px;
+        height: 200px;
+        box-sizing: border-box;
+        font-family: "OpenSansBold", "Arial", sans-serif;
+        font-size: 96px;
+        line-height: 150px;
+        text-align: center;
+        color: @color-pink;
+        border: 20px solid @color-pink;
+        border-radius: 50%;
+        //background-image: url("../../img/timer-svg.svg");
+        //
+        //background-position: left top;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 59px;
+        left: 0;
+        width: 238px;
+        height: 276px;
+        background-image: url("../img/timer-svg.svg");
+        background-repeat: no-repeat;
+        background-size: 238px 276px;
+      }
     }
 
     &-title {
@@ -116,6 +171,7 @@
   }
 }
 
+////////////////////////////////////////////////////////////////////////////////////////////////////
 @media (min-width: @desktop-width) {
   .advantages {
     &__text {
@@ -144,19 +200,65 @@
     &__list {
       width: 100%;
       margin-left: 0;
+      padding-left: 0;
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
       justify-content: space-between;
+      background-image: none;
     }
 
     &__item {
+      position: relative;
       width: 240px;
       padding-top: 360px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 25px;
+        width: 186px;
+        height: 301px;
+        //background-image: url("../../img/iphone-screen-1-copy.png");
+        //background-position: center top;
+        background-repeat: no-repeat;
+        background-size: 186px auto;
+        //box-shadow: 0 2px 12px 2px black;
+      }
+
+      &--fun::before {
+        background-image: url("../img/iphone-screen-1-copy.png");
+
+        @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+          background-image: url("../img/iphone-screen-1-copy@2x.png");
+        }
+      }
+
+      &--change::before {
+        background-image: url("../img/iphone-screen-2-copy-3.png");
+
+        @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+          background-image: url("../img/iphone-screen-2-copy-3@2x.png");
+        }
+      }
+
+      &--friend::before {
+        background-image: url("../img/iphone-screen-3-copy-2.png");
+
+        @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+          background-image: url("../img/iphone-screen-3-copy-2@2x.png");
+        }
+      }
     }
 
     &__effect {
       background-color: @color-back-grey;
+
+      .container {
+        padding-left: 365px;
+        padding-right: 170px;
+      }
 
       &-title {
         line-height: 30px;

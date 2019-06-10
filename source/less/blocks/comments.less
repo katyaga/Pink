@@ -6,11 +6,21 @@
   &__button {
     display: none;
   }
+
+  &__choice {
+    margin: 0 auto;
+    width: 70px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 
 .comments__list {
   margin: 0;
   padding: 0;
+  margin-bottom: 42px;
   list-style: none;
 }
 
@@ -48,6 +58,10 @@
 @media (min-width: @tablet-width) {
   .comments {
     min-height: 300px;
+
+    &__about-author {
+      display: inline-block;
+    }
   }
 
   .comments__item {
@@ -64,6 +78,7 @@
   }
 }
 
+//////////////////////////////////////////////////////////////////////////////////////
 @media (min-width: @desktop-width) {
   .comments {
     .container {
@@ -94,17 +109,36 @@
   }
 
   .comments__button {
+    content: "";
     position: absolute;
     display: block;
+    top: 50%;
+    width: 22px;
+    height: 41px;
+    background-color: transparent;
+    border: none;
+    opacity: 0.3;
+    background-image: url("../img/left-arrow-svg.svg");
+    background-size: 22px 41px;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    &:hover,
+    &:focus {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.1;
+    }
 
     &--back {
-      top: 50%;
       left: 130px;
     }
 
     &--next {
-      top: 50%;
       right: 130px;
+      transform: rotate(180deg);
     }
   }
 }

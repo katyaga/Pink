@@ -1,5 +1,30 @@
 .upload-photo {
   background-color: @color-back-white;
+
+  &__progressbar {
+    display: none;
+    position: absolute;
+    bottom: 34px;
+    left: -15px;
+    width: 240px;
+    height: 2px;
+    background-color: @color-dark-font;
+
+    &-scale {
+      position: absolute;
+      width: 14px;
+      height: 15px;
+      top: -7px;
+      left: 180px;
+      background-color: @color-back-grey;
+      border: 2px solid @color-pink;
+      border-radius: 50%;
+
+      &:active {
+        background-color: @color-pink;
+      }
+    }
+  }
 }
 
 .upload-photo__text {
@@ -16,11 +41,72 @@
   min-height: 75px;
   margin: 0;
   padding: 0 44px 0 35px;
+}
+
+.upload-photo__wrapper {
+  position: relative;
+  padding-bottom: 75px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   list-style: none;
+  //border-bottom: 1px solid @color-border-grey;
+}
+
+.upload-photo__buttons {
+  background-color: transparent;
+  border: none;
+
+  svg {
+    fill: @color-back-header;
+  }
+}
+
+.upload-photo__setting {
+  &--cut {
+    .upload-photo__buttons svg {
+      width: 44px;
+      height: 44px;
+    }
+  }
+
+  &--fill {
+    .upload-photo__buttons svg {
+      width: 48px;
+      height: 43px;
+    }
+  }
+
+  &--bright {
+    .upload-photo__buttons svg {
+      width: 32px;
+      height: 32px;
+    }
+  }
+
+  &--active {
+    .upload-photo__progressbar {
+      display: inline-block;
+    }
+
+    svg {
+      fill: @color-pink;
+    }
+  }
+
+  .upload-photo__buttons:hover,
+  .upload-photo__buttons:focus {
+    svg {
+      fill: @color-button-hover;
+    }
+  }
+
+  .upload-photo__buttons:active {
+    svg {
+      fill: @color-pink;
+    }
+  }
 }
 
 .upload-photo__button {
@@ -34,13 +120,35 @@
   border: 3px solid @color-pink;
   border-radius: 30px;
 
-  &--active {
+  &--upload {
     color: @color-pink;
+
+    &:hover,
+    &:focus {
+      color: @color-back-white;
+      background-color: @color-pink;
+    }
+
+    &:active {
+      color: @color-white-light;
+    }
   }
 
-  &--disabled {
+  &--cancel {
     color: @color-button-disabled;
     border-color: @color-button-disabled;
+
+    &:hover,
+    &:focus {
+      color: @color-back-header;
+      border-color: @color-back-header;
+    }
+
+    &:active {
+      color: @color-white-light;
+      background-color: @color-back-header;
+      border-color: transparent;
+    }
   }
 
   &:first-of-type {
@@ -66,12 +174,51 @@
   }
 }
 
+////////////////////////////////////////////////////////////////////////////////////////////////////
+@media (min-width: @tablet-width) and (max-width: 1199px) {
+  .upload-photo__setting {
+    &--cut {
+      .upload-photo__buttons svg {
+        width: 22px;
+        height: 22px;
+      }
+    }
+
+    &--fill {
+      .upload-photo__buttons svg {
+        width: 24px;
+        height: 22px;
+      }
+    }
+
+    &--bright {
+      .upload-photo__buttons svg {
+        width: 16px;
+        height: 16px;
+      }
+    }
+  }
+}
+
 @media (min-width: @tablet-width) {
   .upload-photo {
+    .container {
+      justify-content: space-between;
+    }
+
     &__text {
       padding: 70px 0 68px;
       width: 430px;
       font-size: 18px;
+    }
+
+    &__progressbar {
+      position: relative;
+      margin-right: 18px;
+      top: 0;
+      left: 0;
+      display: block;
+      width: 202px;
     }
   }
 
@@ -80,25 +227,96 @@
       padding-top: 57px;
       display: flex;
       flex-wrap: wrap;
+      flex-direction: row;
     }
 
     img {
-      margin-right: 45px;
-      margin-bottom: 10px;
+      //margin-right: 45px;
+      margin-bottom: 0;
       width: 300px;
       height: 400px;
     }
   }
 
+  .upload-photo__setting {
+    margin-bottom: 26px;
+    padding-bottom: 24px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid @color-border-grey;
+
+    &--cut {
+      .upload-photo {
+        &__progressbar-scale {
+          left: 130px;
+        }
+
+        //&__buttons svg {
+        //  width: 22px;
+        //  height: 22px;
+        //}
+      }
+    }
+
+    &--fill {
+      .upload-photo {
+        &__progressbar-scale {
+          left: 11px;
+        }
+
+        //&__buttons svg {
+        //  width: 24px;
+        //  height: 22px;
+        //}
+      }
+    }
+
+    &--bright {
+      .upload-photo {
+        &__progressbar-scale {
+          left: 80px;
+        }
+
+        //&__buttons svg {
+        //  width: 16px;
+        //  height: 16px;
+        //}
+      }
+    }
+  }
+
   .upload-photo__settings {
+    padding: 10px 0 0;
+    width: 275px;
+  }
+
+  .upload-photo__wrapper {
+    padding-bottom: 0;
+    margin-bottom: 30px;
     flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .upload-photo__buttons {
+    svg {
+      fill: @color-pink;
+    }
   }
 
   .upload-photo__button {
+    margin: 0;
     width: 260px;
+
+    &:first-of-type {
+      margin: 0 0 24px;
+    }
   }
 }
 
+////////////////////////////////////////////////////////////////////////////////////////////////////
 @media (min-width: @desktop-width) {
   .upload-photo {
     &__text {
@@ -112,7 +330,7 @@
     }
 
     &__setting {
-
+      padding-bottom: 13px;
       width: 100%;
     }
 
@@ -120,8 +338,17 @@
       width: 183px;
 
       &:first-of-type {
-        margin-top: 0;
+        margin-bottom: 0;
       }
+    }
+
+    &__progressbar {
+      margin-right: 30px;
+      width: 288px;
+    }
+
+    &__wrapper {
+      margin-bottom: 90px;
     }
   }
 
@@ -133,6 +360,7 @@
       width: 940px;
       padding-left: 80px;
       padding-right: 60px;
+      padding-bottom: 57px;
 
       background-color: @color-back-grey;
     }

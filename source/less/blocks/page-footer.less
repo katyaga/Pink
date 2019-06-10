@@ -10,9 +10,26 @@
     align-items: center;
   }
 
-  &__copyright {
-    width: 100%;
-    padding-left: 75px;
+  &__developed {
+    margin-right: 15px;
+    line-height: 18px;
+    color: @color-dark-font;
+  }
+
+  .logo-glasses {
+    fill: @color-pink;
+  }
+
+  .logo-pink {
+    fill: @color-dark-font;
+  }
+
+  .red-star {
+    fill: @color-pink;
+  }
+
+  .other-stars {
+    fill: @color-dark-font;
   }
 }
 
@@ -20,15 +37,47 @@
   margin-bottom: 43px;
   display: block;
   width: 147px;
-  min-height: 40px;
-  background-color: #d22856;
+  height: 40px;
+
+  svg {
+    width: 147px;
+    height: 40px;
+  }
+
+  &:hover .logo-pink,
+  &:focus .logo-pink {
+    fill: @color-pink;
+  }
+
+  &:active .logo-glasses,
+  &:active .logo-pink {
+    opacity: 0.3;
+  }
+
+  &:active .logo-pink {
+    fill: @color-dark-font;
+  }
 }
 
-.page-footer__copyright-link {
-  line-height: 18px;
-  color: @color-dark-font;
+.page-footer__copyright {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+
+
+  &-image {
+    display: block;
+  }
+
+  svg {
+    width: 27px;
+    height: 34px;
+    fill: @color-pink;
+  }
 }
 
+//////////////////////////////////////////////////////////////////////////////////////////////
 @media (min-width: @tablet-width) {
   .page-footer {
     .container {
@@ -43,15 +92,16 @@
     }
 
     &__copyright {
-      width: 130px;
-      padding-left: 0;
-      padding-right: 40px;
+      width: 160px;
+      text-align: right;
+      //padding-left: 0;
+      //padding-right: 40px;
     }
   }
 
   .page-footer__logo {
-    width: 147px;
-    min-height: 40px;
+    //width: 147px;
+    //min-height: 40px;
     margin-bottom: 0;
   }
 }
@@ -62,7 +112,7 @@
       min-height: 197px;
     }
 
-    &__copyright-link {
+    &__developed {
       font-size: 18px;
     }
   }

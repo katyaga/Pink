@@ -1,0 +1,36 @@
+.logo-glasses,
+.logo-pink {
+  fill: @color-back-white;
+}
+
+.red-stars {
+  fill: @color-pink;
+}
+
+.logo-tablet-h,
+.logo-desktop-h {
+  display: none;
+}
+
+@media (min-width: @tablet-width) {
+  .logo-mobile-h,
+  .logo-desktop-h {
+    display: none;
+  }
+
+  .logo-tablet-h {
+    display: inline-block;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .logo-mobile-h,
+  .logo-tablet-h,
+  .logo-tablet-f {
+    display: none;
+  }
+
+  .logo-desktop-h {
+    display: inline-block;
+  }
+}

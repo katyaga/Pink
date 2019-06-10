@@ -1,19 +1,67 @@
+//.page-header {
+//  background-color: @color-back-header;
+//}
+
 .page-header {
-  background-color: @color-back-header;
+  position: relative;
+  margin-bottom: -65px;
+
+  &--nav-closed {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+
+  &--nojs {
+    background-color: @color-dark-font;
+  }
+
+  .logo-glasses {
+    //display: none;
+    fill: @color-back-white;
+  }
+
+  .logo-pink {
+    fill: @color-back-white;
+  }
+
+  .red-star,
+  .other-stars {
+    //display: none;
+    fill: @color-pink;
+  }
 }
 
 .page-header__header {
+
   min-height: 66px;
   padding: 20px;
 }
 
 .page-header__logo {
   width: 75px;
-  min-height: 22px;
+  height: 22px;
   display: block;
-  background-color: #2aab6d;
+  //background-color: #2aab6d;
+  &:hover .logo-glasses,
+  &:focus .logo-glasses,
+  &:hover .logo-pink,
+  &:focus .logo-pink {
+    fill: @color-pink;
+  }
+
+  &:active .logo-glasses,
+  &:active .logo-pink {
+    fill: @color-back-white;
+    opacity: 0.3;
+  }
 }
 
+.page-header__logo svg {
+  margin-left: -5px;
+  width: 150px;
+  height: 35px;
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////
 @media (min-width: @tablet-width) {
   .page-header__header {
     min-height: 110px;
@@ -24,8 +72,22 @@
     width: 147px;
     min-height: 40px;
   }
+
+  .page-header__logo svg {
+    margin-top: 0;
+    margin-left: 0;
+    width: 150px;
+    height: 38px;
+  }
+
+  .page-header {
+    .logo-glasses {
+      display: inline-block;
+    }
+  }
 }
 
+///////////////////////////////////////////////////////////////////////////////////////////
 @media (min-width: @desktop-width) {
   .page-header {
     //padding: 0 130px;
