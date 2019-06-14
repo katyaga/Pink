@@ -3,13 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <title>Приложение для обработки фотографий "Pink"</title>
-  <link href="css/style.css" rel="stylesheet">
+  <link href="css/style.min.css" rel="stylesheet">
   <script src="js/picturefill.min.js"></script>
 </head>
 <body>
+<div style="display:none">
+  <include src="build/img/sprite.svg"></include>
+</div>
 <header class="page-header page-header--nav-closed page-header--nojs">
   <div class="page-header__header">
-    <a class="page-header__logo">
+    <a class="page-header__logo" href="index.html">
       <span class="visually-hidden">Логотип приложения "Pink"</span>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 146 40">
         <g class="logo-mobile-h">
@@ -204,7 +207,7 @@
       <a class="page-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive">
         <span class="visually-hidden">Логотип HTML Academy</span>
         <svg width="27" height="34">
-          <use xlink:href="img/sprite.svg#logo-html"></use>
+          <use xlink:href="img/sprite.svg#inline-logo-htmlacademy"></use>
         </svg>
       </a>
     </div>

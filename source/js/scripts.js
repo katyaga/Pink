@@ -27,8 +27,8 @@ function getIconSize () {
 
 function getPlacemark(myMap) {
   return new ymaps.Placemark([59.938631, 30.323055], {
-    hintContent: 'Собственный значок метки',
-    balloonContent: 'Магазин "CAT ENERGY"'
+    hintContent: 'ул. Большая Конюшенная, 19/8',
+    balloonContent: '"PINK"'
   }, {
     iconImageHref: "img/map-marker-svg.svg",
     iconLayout: 'default#image',
