@@ -1,11 +1,12 @@
 .social {
+  margin-bottom: 37px;
+
   &__list {
     margin: 0;
     padding: 0;
     width: 280px;
     padding-left: 50px;
     padding-right: 50px;
-    margin-bottom: 40px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -13,16 +14,10 @@
     list-style: none;
   }
 
-  //&__item {
-  //  width: 46px;
-  //  height: 46px;
-  //  background-color: #d22856;
-  //}
-
   &__link {
     display: block;
-    width: 46px;
-    height: 46px;
+    width: 52px;
+    height: 52px;
     border: 3px solid @color-border-grey;
     border-radius: 50%;
     background-repeat: no-repeat;
@@ -30,17 +25,17 @@
 
     &--twitter {
       background-image: url("../img/twitter-svg.svg");
-      background-size: 18px 14px;
+      background-size: 18px 15px;
     }
 
     &--facebook {
       background-image: url("../img/icon-facebook.svg");
-      background-size: 9px 18px;
+      background-size: 9px 19px;
     }
 
     &--youtube {
       background-image: url("../img/icon-youtube.svg");
-      background-size: 15px 13px;
+      background-size: 15px 14px;
     }
 
     &:hover,
@@ -56,10 +51,17 @@
 
 @media (min-width: @tablet-width) {
   .social {
-    width: 275px;
+    width: 267px;
+    margin-bottom: 0;
 
     &__list {
-      margin-bottom: 0;
+      padding-top: 2px;
     }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .social__list {
+    padding-top: 4px;
   }
 }

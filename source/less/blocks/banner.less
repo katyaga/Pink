@@ -1,14 +1,14 @@
 .banner {
-  padding-top: 396px;
-  margin-top: -65px;
+  padding-top: 462px;
+  margin-top: -66px;
   //max-width: 320px;
   display: flex;
   flex-wrap: wrap;
   background-color: @color-dark-font;
   background-image: url("../img/iphone-5-in-hand-png-1.png"),
-    url("../../img/back-mobile-jpg.png");
+    url("../img/back-mobile-jpg.png");
   background-repeat: no-repeat;
-  background-position: center 111px, center top;
+  background-position: center 175px, center top;
   background-size: 320px auto;
 
   @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
@@ -18,22 +18,16 @@
 
 .banner__app {
   width: 100%;
-  min-height: 271px;
   padding-top: 28px;
+  padding-bottom: 29px;
   background-color: @color-dark-font;
   //text-align: center;
 }
 
-//.banner__back {
-//  order: -1;
-//  min-height: 396px;
-//  width: 100%;
-//}
-
 .banner__list {
   margin: 0;
   padding: 0;
-  margin-bottom: 25px;
+  margin-bottom: 23px;
   padding-left: 38px;
   padding-right: 38px;
   display: flex;
@@ -47,7 +41,7 @@
   display: none;
   font-family: "OpenSansLight", "Arial", sans-serif;
   font-size: 40px;
-  line-height: 40px;
+  line-height: 48px;
   font-weight: 300;
   color: @color-back-white;
   text-align: center;
@@ -63,9 +57,9 @@
 .banner__button {
   display: block;
   width: 280px;
-  margin-bottom: 28px;
-  padding-top: 18px;
-  padding-bottom: 18px;
+  margin-bottom: 31px;
+  padding-top: 14px;
+  padding-bottom: 17px;
   font-family: "OpenSansBold", "Arial", sans-serif;
   font-size: 18px;
   line-height: 18px;
@@ -109,8 +103,8 @@
 
   &--android {
     &::before {
-      top: 4px;
-      left: 1px;
+      top: 8px;
+      left: 2px;
       width: 43px;
       height: 47px;
       background-image: url("../img/android-logo-svg.svg");
@@ -119,8 +113,8 @@
 
   &--windows {
     &::before {
-      top: 8px;
-      left: 1px;
+      top: 12px;
+      left: 2px;
       width: 44px;
       height: 41px;
       background-image: url("../img/microsoft-logo-svg.svg");
@@ -131,8 +125,9 @@
 //////////////////////////////////////////////////////////////////////////////////////////////////
 @media (min-width: @tablet-width) {
   .banner {
-    margin-top: -110px;
+    margin-top: -111px;
     padding-top: 185px;
+    //padding-bottom: 111px;
     //position: relative;
     background-image: url("../img/back-tablet-1-x.png");
     background-position: center top;
@@ -143,42 +138,31 @@
       background-image: url("../img/back-tablet-1-x@2x.png");
     }
   }
-  //
-  //.banner__back {
-  //  min-height: 729px;
-  //}
 
   .banner__slogan {
     margin-left: 50px;
-    margin-bottom: 35px;
+    margin-bottom: 30px;
     display: block;
     width: 200px;
   }
 
   .banner__app {
-    min-height: 545px;
-    //position: absolute;
-    //top: 100px;
-    //left: 20px;
-    //width: 300px;
+    padding-top: 19px;
+    padding-bottom: 111px;
     background-color: transparent;
     background-image: url("../img/iphone-6-copy.png");
-    background-position: center;
+    background-position: center top;
     background-repeat: no-repeat;
     background-size: 887px auto;
 
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
       background-image: url("../img/iphone-6-copy@2x.png");
     }
-
-    //.container {
-    //  width: 300px;
-    //  padding: 0;
-    //}
   }
 
   .banner__button {
     width: 300px;
+    margin-bottom: 46px;
   }
 
   .banner__text {
@@ -187,12 +171,15 @@
   }
 
   .banner__list {
+    margin-bottom: 35px;
+    padding: 0 48px 0 46px;
     width: 300px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .banner {
+    padding-top: 209px;
     justify-content: center;
     background-image: url("../img/back-desktop.png");
     background-position: center top;
@@ -205,9 +192,33 @@
 
 
     &__app {
-      min-height: 645px;
+      padding-top: 0;
+      padding-bottom: 0;
+      background-image: none;
+    }
+
+    &__slogan {
+      margin-left: 31px;
+      margin-bottom: 53px;
+      width: 240px;
+      font-size: 50px;
+      line-height: 59px;
+    }
+
+    &__button {
+      margin-bottom: 67px;
+      font-size: 21px;
+    }
+
+    &__list {
+      margin-bottom: 55px;
+    }
+
+    .container {
+      padding-top: 12px;
+      padding-bottom: 122px;
       background-image: url("../img/iphone-6.png");
-      background-position: center;
+      background-position: right top;
       background-repeat: no-repeat;
       background-size: 1050px auto;
 
@@ -215,19 +226,5 @@
         background-image: url("../img/iphone-6@2x.png");
       }
     }
-
-    &__slogan {
-      width: 240px;
-      font-size: 50px;
-      line-height: 50px;
-    }
-
-    &__button {
-      font-size: 21px;
-    }
-
-    //.container {
-    //  width: 300px;
-    //}
   }
 }

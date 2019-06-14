@@ -1,18 +1,6 @@
-//.page-header {
-//  background-color: @color-back-header;
-//}
-
 .page-header {
   position: relative;
   margin-bottom: -65px;
-
-  &--nav-closed {
-    background-color: rgba(0, 0, 0, 0.3);
-  }
-
-  &--nojs {
-    background-color: @color-dark-font;
-  }
 
   .logo-glasses {
     //display: none;
@@ -31,12 +19,11 @@
 }
 
 .page-header__header {
-
-  min-height: 66px;
-  padding: 20px;
+  padding: 22px 21px;
 }
 
 .page-header__logo {
+  //margin-left: 6px;
   width: 75px;
   height: 22px;
   display: block;
@@ -58,26 +45,37 @@
 .page-header__logo svg {
   margin-left: -5px;
   width: 150px;
-  height: 35px;
+  height: 38px;
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////
+@media (max-width: 1199px) {
+  .page-header {
+    background-color: @color-dark-font;
+
+    &--nav-closed {
+      background-color: rgba(0, 0, 0, 0.3);
+    }
+  }
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////
 @media (min-width: @tablet-width) {
   .page-header__header {
-    min-height: 110px;
     padding-top: 27px;
+    padding-bottom: 43px;
   }
 
   .page-header__logo {
     width: 147px;
-    min-height: 40px;
+    height: 40px;
   }
 
   .page-header__logo svg {
     margin-top: 0;
     margin-left: 0;
-    width: 150px;
-    height: 38px;
+    width: 147px;
+    height: 40px;
   }
 
   .page-header {
@@ -94,10 +92,11 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    background-color: rgba(0, 0, 0, 0.3);
 
     &__header {
       width: 320px;
-      padding: 27px 0 0;
+      padding: 27px 0 43px;
     }
   }
 }

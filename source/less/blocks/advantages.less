@@ -1,11 +1,10 @@
 .advantages {
   position: relative;
-  padding-top: 42px;
-  padding-bottom: 280px;
-  //min-height: 1002px;
+  padding-top: 40px;
+  padding-bottom: 287px;
   text-align: center;
   background-color: @color-back-grey;
-  background-image: linear-gradient(175deg, white 35%, transparent 35%),
+  background-image: linear-gradient(174deg, white 24.5%, transparent 24.5%),
     url("../img/iphone-screen-3-mobile-k.png");
   background-position: bottom;
   background-repeat: no-repeat;
@@ -18,17 +17,18 @@
 
 .advantages__text {
   width: 210px;
-  margin-bottom: 110px;
+  margin-bottom: 113px;
   display: inline-block;
   font-family: "OpenSansLight", "Arial", sans-serif;
   font-size: 24px;
+  line-height: 29px;
   font-weight: 300;
   color: @color-dark-font;
   //text-align: center;
 
   span {
     display: block;
-    margin-top: 30px;
+    margin-top: 29px;
   }
 }
 
@@ -39,12 +39,12 @@
 }
 
 .advantages__item {
-  margin-bottom: 35px;
+  margin-bottom: 31px;
 }
 
 .advantages__title {
   margin: 0;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
   font-family: "OpenSansBold", "Arial", sans-serif;
   font-size: 18px;
   color: @color-black-font;
@@ -77,19 +77,21 @@
   color: @color-pink;
 }
 
+///////////////////////////////////////////////////////////////////////////////////////////////////
 @media (min-width: @tablet-width) {
   .advantages {
+    padding-top: 50px;
     padding-bottom: 0;
-    min-height: 725px;
     text-align: left;
-    background-image: linear-gradient(175deg, white 30%, transparent 30%);
+    background-image: linear-gradient(176deg, @color-back-white 25%, @color-back-grey 25%);
+    background-size: 100%;
   }
 
   .advantages__text {
-    margin-bottom: 120px;
-    width: 590px;
+    margin-bottom: 45px;
+    width: 100%;
     font-size: 40px;
-    line-height: 40px;
+    line-height: 48px;
     text-align: center;
 
     span {
@@ -101,12 +103,13 @@
   .advantages__list {
     width: 620px;
     margin: 0 auto;
-    padding-top: 105px;
+    padding-top: 75px;
+    padding-bottom: 9px;
     padding-left: 310px;
     text-align: left;
     background-image: url("../img/iphone-screen-3-tablet.png");
     background-repeat: no-repeat;
-    background-position: left;
+    background-position: left bottom;
     background-size: 268px auto;
 
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
@@ -115,45 +118,43 @@
   }
 
   .advantages__item {
-    margin-bottom: 43px;
+    margin-bottom: 34px;
   }
 
   .advantages__effect {
+    padding-bottom: 77px;
     display: block;
-    min-height: 387px;
 
     .container {
       position: relative;
-      padding-top: 100px;
-      padding-left: 310px;
+      padding-top: 97px;
+      padding-left: 330px;
 
       &::after {
         content: "24";
         position: absolute;
-        top: 115px;
-        left: 18px;
-        width: 200px;
-        height: 200px;
+        top: 114px;
+        left: 38px;
+        width: 203px;
+        height: 203px;
         box-sizing: border-box;
         font-family: "OpenSansBold", "Arial", sans-serif;
         font-size: 96px;
-        line-height: 150px;
+        line-height: 163px;
         text-align: center;
         color: @color-pink;
-        border: 20px solid @color-pink;
+        border: 14px solid @color-pink;
         border-radius: 50%;
-        //background-image: url("../../img/timer-svg.svg");
-        //
-        //background-position: left top;
       }
 
       &::before {
         content: "";
         position: absolute;
         top: 59px;
-        left: 0;
+        left: 20px;
         width: 238px;
         height: 276px;
+        box-sizing: border-box;
         background-image: url("../img/timer-svg.svg");
         background-repeat: no-repeat;
         background-size: 238px 276px;
@@ -174,11 +175,15 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 @media (min-width: @desktop-width) {
   .advantages {
+    padding-top: 70px;
+    background-image: linear-gradient(176deg, @color-back-white 29%, @color-back-grey 29%);
+    //background-repeat: repeat;
+
     &__text {
-      width: 740px;
-      margin: 0 auto 75px;
+      //width: 740px;
+      margin: 0 auto 77px;
       font-size: 50px;
-      line-height: 50px;
+      line-height: 59px;
 
       span {
         width: 450px;
@@ -186,6 +191,7 @@
     }
 
     &__title {
+      margin-bottom: 25px;
       font-size: 30px;
       line-height: 30px;
       text-align: center;
@@ -200,7 +206,9 @@
     &__list {
       width: 100%;
       margin-left: 0;
-      padding-left: 0;
+      padding-top: 0;
+      padding-left: 30px;
+      padding-right: 30px;
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
@@ -211,7 +219,7 @@
     &__item {
       position: relative;
       width: 240px;
-      padding-top: 360px;
+      padding-top: 356px;
 
       &::before {
         content: "";
@@ -253,18 +261,42 @@
     }
 
     &__effect {
+      padding-bottom: 0;
       background-color: @color-back-grey;
 
       .container {
-        padding-left: 365px;
+        padding-top: 116px;
+        padding-left: 496px;
         padding-right: 170px;
+        padding-bottom: 114px;
+
+        &::after {
+          top: 91px;
+          left: 153px;
+          width: 253px;
+          height: 253px;
+          font-size: 120px;
+          line-height: 207px;
+          border: 16px solid @color-pink;
+        }
+
+        &::before {
+          top: 22px;
+          left: 131px;
+          width: 298px;
+          height: 345px;
+          background-size: 298px 345px;
+        }
       }
 
       &-title {
+        margin-bottom: 24px;
+        width: 100%;
         line-height: 30px;
       }
 
       &-description {
+        margin-bottom: 30px;
         font-size: 18px;
         line-height: 30px;
       }
@@ -272,6 +304,7 @@
       &-more {
         font-size: 18px;
         line-height: 30px;
+        text-decoration: underline;
       }
     }
   }
