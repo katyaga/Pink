@@ -2,9 +2,13 @@
   display: flex;
   flex-wrap: wrap;
 
+  &:not(:last-child) {
+    margin-bottom: 52px;
+  }
+
   &__label {
     position: relative;
-    padding-left: 70px;
+    padding-left: 69px;
     font-size: 18px;
     line-height: 30px;
 
@@ -26,8 +30,8 @@
       position: absolute;
       width: 22px;
       height: 16px;
-      top: 4px;
-      left: 9px;
+      top: 6px;
+      left: 8px;
       background-image: url("../img/icon-yes.svg");
       background-repeat: no-repeat;
     }
@@ -39,6 +43,14 @@
 
     &:active + label::before {
       border-color: @color-pink;
+    }
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .checkbox-button {
+    label {
+      padding-left: 60px;
     }
   }
 }

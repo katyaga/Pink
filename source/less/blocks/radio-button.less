@@ -2,6 +2,10 @@
   display: flex;
   flex-wrap: wrap;
 
+  &:not(:last-child) {
+    margin-bottom: 45px;
+  }
+
   &__label {
     position: relative;
     padding-left: 70px;
@@ -41,6 +45,14 @@
 
     &:active + label::before {
       border-color: @color-pink;
+    }
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .radio-button {
+    label {
+      padding-left: 60px;
     }
   }
 }

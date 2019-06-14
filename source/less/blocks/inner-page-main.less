@@ -1,6 +1,6 @@
 .inner-page-main__back {
   margin-top: -65px;
-  padding: 94px 0 81px;
+  padding: 94px 0 51px;
   width: 100%;
   background-color: @color-dark-font;
   background-image: url("../img/back-mobile-jpg.png");
@@ -16,6 +16,7 @@
 .inner-page-main__title {
   margin: 0 auto;
   width: 200px;
+  min-height: 90px;
   //margin-top: 30px;
   font-family: "OpenSansLight", "Arial", sans-serif;
   font-size: 24px;
@@ -30,7 +31,7 @@
   .inner-page-main {
     &__back {
       margin-top: -110px;
-      padding: 181px 0 140px;
+      padding: 181px 0 78px;
       background-image: url("../img/back-tablet-1-x.png");
       background-repeat: no-repeat;
       background-position: center top;
@@ -43,6 +44,7 @@
 
     &__title {
       width: 360px;
+      min-height: 180px;
       font-size: 50px;
       line-height: 59px;
       text-align: center;
@@ -65,6 +67,11 @@
       }
 
       //padding-top: 185px;
+    }
+
+    &__title {
+      margin-bottom: 1px;
+      min-height: 0;
     }
   }
 }
