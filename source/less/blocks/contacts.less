@@ -1,7 +1,4 @@
 .contacts {
-  //position: relative;
-  //padding-top: 45px;
-  //padding-bottom: 167px;
   text-align: center;
 
   &__phone {
@@ -26,7 +23,6 @@
   font-family: "OpenSansBold", "Arial", sans-serif;
   font-size: 18px;
   color: @color-black-font;
-  //text-align: center;
 }
 
 .contacts__value {
@@ -36,7 +32,6 @@
   line-height: 31px;
   font-weight: 300;
   color: @color-pink;
-  //text-align: center;
 }
 
 .contacts__text {
@@ -54,8 +49,8 @@
   margin: 0 auto 0;
   max-width: 100%;
   height: 228px;
-  //margin-top: -478px;
   background-color: #2aab6d;
+  overflow: hidden;
   text-align: center;
   background-image: url("../img/layer-153-m.png");
   background-position: center bottom;
@@ -70,9 +65,9 @@
     content: "";
     position: absolute;
     width: 100%;
+    max-width: 100%;
     height: 123px;
     top: -63px;
-    //bottom: -59px;
     left: 50%;
     transform: translate(-50%);
     z-index: 1;
@@ -83,6 +78,7 @@
   }
 }
 
+////////////////////////////////////////////////////////////////////////////////////////////////
 @media (min-width: @tablet-width) {
   .contacts__text {
     width: 100%;
@@ -100,13 +96,7 @@
     }
 
     &__phone {
-      //padding-left: 5px;
       margin-bottom: 46px;
-      //margin-right: 100px;
-    }
-
-    &__email {
-      //padding-left: 40px;
     }
 
     &__address {
@@ -114,12 +104,10 @@
     }
 
     &__value {
-      //line-height: 35px;
       margin-top: 3px;
     }
 
     &__map {
-      //margin-top: -207px;
       height: 390px;
       background-image: url("../img/layer-153-t.png");
       background-position: center;
@@ -132,7 +120,6 @@
 
       &::before {
         top: -40px;
-        //background-position: center -127px;
       }
     }
 
@@ -143,6 +130,7 @@
   }
 }
 
+//////////////////////////////////////////////////////////////////////////////////////////////////
 @media (min-width: @desktop-width) {
   .contacts {
     &__text {
@@ -173,7 +161,6 @@
     }
 
     &__map {
-      //margin-top: -54px;
       height: 520px;
       background-image: url("../img/map.png");
       background-position: center top;
@@ -185,9 +172,8 @@
       }
 
       &::before {
-        width: 100%;
+        max-width: 100%;
         top: -25px;
-        //bottom: -130px;
         height: 148px;
         background-position: center;
         background-repeat: no-repeat;

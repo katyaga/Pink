@@ -15,7 +15,7 @@
 }
 
 .photo__description {
-  padding: 18px 20px 20px 17px;
+  padding: 18px 20px 20px 16px;
   background-color: @color-back-grey;
 }
 
@@ -36,7 +36,6 @@
     position: relative;
 
     .photo__image {
-      //position: relative;
       width: 320px;
       height: 137px;
     }
@@ -54,12 +53,13 @@
   &__button {
     position: absolute;
     width: 13px;
-    height: 12px;
+    height: 13px;
     top: 6px;
     left: 1px;
     background-color: transparent;
     background-image: url("../img/icon-heart-svg.svg");
     background-repeat: no-repeat;
+    background-size: 13px 13px;
     border: none;
   }
 }
@@ -113,8 +113,6 @@
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 @media (min-width: @tablet-width) {
   .photos {
-    //flex-direction: row;
-
     &__text {
       padding: 92px 0 76px;
       margin: 0 auto;
@@ -131,14 +129,25 @@
 
   .photo {
     width: 300px;
-    //align-self: stretch;
+
+    &__likes {
+      position: absolute;
+      bottom: 22px;
+      left: 27px;
+      width: 240px;
+      padding-left: 0;
+    }
+
+    &__button {
+      left: auto;
+      right: -1px;
+    }
 
     &--photo-of-day {
       width: 660px;
       margin-bottom: 50px;
 
       .photo__image {
-        //margin: 0 auto;
         width: 660px;
         height: 509px;
       }
@@ -149,10 +158,16 @@
       }
 
       .photo__likes {
+        position: static;
         margin-top: 0;
         width: 150px;
-        padding-right: 30px;
+        padding-right: 32px;
         justify-content: flex-end;
+      }
+
+      .photo__button {
+        top: 29px;
+        right: 32px;
       }
 
       .photo__description {
@@ -169,35 +184,21 @@
     }
 
     &__description {
-      padding: 24px 29px 22px 27px;
+      position: relative;
+      padding: 24px 29px 40px 27px;
       min-height: 155px;
       display: flex;
       flex-direction: column;
       flex-wrap: wrap;
-      //justify-content: space-between;
     }
 
     &__text {
       margin: 0 0 10px;
-      //min-height: 50px;
       width: 100%;
     }
 
     &__image {
       height: 300px;
-    }
-
-    &__likes {
-      margin-top: auto;
-      margin-bottom: 0;
-      padding-left: 0;
-      //padding-right: 30px;
-      //align-self: center;
-    }
-
-    &__button {
-      left: auto;
-      right: 2px;
     }
   }
 }
@@ -205,8 +206,6 @@
 @media (min-width: @desktop-width) {
   .photos {
     &__text {
-      //padding-top: 93px;
-      //padding-right: 21px;
       padding-bottom: 88px;
       width: 600px;
     }

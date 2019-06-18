@@ -7,7 +7,6 @@
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    //align-items: center;
   }
 
   &__developed {
@@ -71,6 +70,12 @@
     width: 27px;
     height: 34px;
 
+    svg {
+      width: 27px;
+      height: 34px;
+      fill: @color-pink;
+    }
+
     &:hover svg,
     &:focus svg {
       fill: @color-dark-font;
@@ -79,12 +84,6 @@
     &:active svg {
       fill: @color-back-header;
     }
-  }
-
-  svg {
-    width: 27px;
-    height: 34px;
-    fill: @color-pink;
   }
 }
 
@@ -96,7 +95,6 @@
       padding-bottom: 40px;
       flex-direction: row;
       justify-content: space-between;
-      //align-items: center;
     }
 
     &__copyright {
@@ -104,8 +102,6 @@
       width: 160px;
       text-align: right;
       justify-content: flex-end;
-      //padding-left: 0;
-      //padding-right: 40px;
     }
   }
 
@@ -114,6 +110,7 @@
   }
 }
 
+/////////////////////////////////////////////////////////////////////////////////////////////////
 @media (min-width: @desktop-width) {
   .page-footer {
     .container {
